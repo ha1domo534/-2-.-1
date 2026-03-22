@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int a, b, p, s;
+double d;
+int pr(int a, int b){
+    return (a  * 2 + b * 2);
+}
+int pl(int a, int b){
+    return (a * b);
+}
+double di(int a, int b){
+    return(sqrt(a*a + b*b));
+}
+int main(){
+    cout <<"Введите длину прямоугольника:" << "\n";
+    cin >> a;
+    cout <<"Введите ширину прямоугольника:" << "\n";
+    cin >> b;
+    if (a<=0  b<=0  b>a){
+        cout << "Длина должна быть больше ширины! Числа должны быть положительными!";
+        return 1;
+    }
+    p = pr(a, b);
+    s = pl(a, b);
+    d = di(a, b);
+    cout <<"Периметр:" << p << "\n";
+    cout << "Площадь:" << s << "\n";
+    cout << "диагональ:" << d << "\n";
+    return 0;
+}
